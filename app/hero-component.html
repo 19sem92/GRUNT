@@ -1,0 +1,22 @@
+<div (mouseover)="colorChange()">
+<h1>{{title}}</h1>
+<h2><span style="color:{{hero.color}};">
+    {{hero.name}}</span> details!
+
+</h2>
+<div>
+    <label>name:</label>
+    <input [(ngModel)]="hero.name" placeholder="name" (focus)="onColorGreenChange()" />
+</div>
+    <div>
+        <input type="button" value="green"
+               (click)="onColorGreenChange()"/>
+    </div>
+    <div class="div">
+        <select>
+            <option *ngFor="#p of powers" [value]="p">{{p}}</option>
+        </select>
+    </div>
+
+
+</div>
